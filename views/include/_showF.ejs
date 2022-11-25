@@ -1,0 +1,27 @@
+<script>
+    function showMore(j) {
+        if(document.getElementById("row+"+j).style.display=="contents")
+            document.getElementById("row+"+j).style.display="none";
+        else
+            document.getElementById("row+"+j).style.display="contents";
+    }
+    function theNote(note) {
+        if(!note=="")
+            window.alert(note);
+    }
+ </script>
+<% for (var i=0; i<freiman.length; i++) { %>
+
+<tr>
+    <th><%=freiman[i].name%></th>
+    <th><%=freiman[i].status%></th>
+    <th>
+        <a> <div id="<%=i%>" onclick="showMore(this.id)" class="fa-solid fa-user"></div></a>
+    </th>
+</tr>
+<tr style="display: none; color:#fff" id="row+<%=i%>">
+    <th><%=freiman[i].email%></th>
+    <th><%=freiman[i].numOfF%> נשים <%=freiman[i].numOfM%> גברים</th>
+    <th><a id="text<%=i%>"> <div id="<%=freiman[i].notes%>" onclick="theNote(this.id)" class="fa-solid fa-envelope"></div></a></th>
+</tr>
+<% } %>

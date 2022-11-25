@@ -1,0 +1,13 @@
+<table id="hidden" style="display: none;" dir="rtl">
+
+    <% for (var i=0; i<participents.length; i++) { %>
+
+        <tr>
+            <th><%=participents[i].name%></th>
+            <th><%=participents[i].status%></th>
+            <th><%=participents[i].email%></th>
+            <th><%=parseInt(participents[i].numOfF)%></th>
+            <th><%=parseInt(participents[i].numOfM)%></th>
+            <th><%=participents[i].notes%></th>
+        <% } %>
+</table>

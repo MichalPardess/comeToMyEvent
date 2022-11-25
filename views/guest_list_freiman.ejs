@@ -1,0 +1,53 @@
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+   <script>
+    function ExportToExcel(type, fn, dl) {
+       var elt = document.getElementById('hidden');
+       var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1"});
+       return dl ?
+         XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
+         XLSX.writeFile(wb, fn || ('guestListFreiman.' + (type || 'xlsx')));
+    }
+   </script>
+<!--include header-->
+<%- include('include/_header') %>
+<!--include header-->
+
+    <!--main site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/zviki-tamar-freiman" class="border-shaddow">
+                    <span class="text-gradient">הוספת אורח</span>
+                </a>
+            </div>
+            <div>
+                <button onclick="ExportToExcel('xlsx')" style="color:#fceed7">
+                    <span class="fa-solid fa-download" style="color:#fceed7 ;"></span>
+                    הורדת רשימה
+                </button>
+            </div>
+
+            <!--form handling-->
+            <form action="/" method="POST">
+                <table id="tableG" class="table" dir="rtl">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th width="33%">שם</th>
+                            <th width="33%">סטטוס</th>
+                            <th width="33%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_showF') %>
+                    </tbody>
+                </table>
+                <%- include('include/_hidden table freiman') %>
+
+            </form>
+        </div>
+    </main>
+    <!--main site-->
+
+<!--include footer-->
+<%- include('include/_footer') %>
+<!--include footer-->
