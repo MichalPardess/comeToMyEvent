@@ -5,7 +5,7 @@
        var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1"});
        return dl ?
          XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
-         XLSX.writeFile(wb, fn || ('guestListFreiman.' + (type || 'xlsx')));
+         XLSX.writeFile(wb, fn || ('guestList.' + (type || 'xlsx')));
     }
    </script>
 <!--include header-->
@@ -16,7 +16,7 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/zviki-tamar-freiman" class="border-shaddow">
+                <a href="/bentzi-tovi" class="border-shaddow">
                     <span class="text-gradient">הוספת אורח</span>
                 </a>
             </div>

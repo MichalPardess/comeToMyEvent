@@ -8,11 +8,11 @@ route.get('/',services.homeRoutes);
 
 //route.get('/add-user',services.add_user);
 route.get('/guest-list',services.guest_list);
-route.get('/guest-list-freiman',services.guest_list_freiman);
+route.get('/guest-list-katz',services.guest_list_katz);
 route.get('/avraham-efrat',services.add_rsvp);
 route.get('/error-page',services.error_page);
 route.get('/error-page-freiman',services.error_pageF);
-route.get('/zviki-tamar-freiman',services.zviki_tamar_freiman);
+route.get('/bentzi-tovi',services.bentzi_tovi);
 route.post('/api/freiman', controller.createF);
 route.post('/api/participents', controller.create);
 route.get('/api/participents', controller.find);

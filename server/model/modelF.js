@@ -7,7 +7,6 @@ var schema = new mongoose.Schema({
     },
     email : {
         type: String,
-        required: true,
         unique: true
     },
     numOfF : String,
@@ -16,5 +15,5 @@ var schema = new mongoose.Schema({
     notes : String
 })
 
-const Freimandb = mongoose.model('Freimandb', schema);
-module.exports = Freimandb;
+const Katzdb = mongoose.model('Katzdb', schema);
+module.exports = Katzdb;

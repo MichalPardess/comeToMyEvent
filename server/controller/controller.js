@@ -1,5 +1,5 @@
 var Participentsdb= require('../model/model');
-var Freimandb= require('../model/modelF');
+var Katzdb= require('../model/modelF');
 // create and save new user
 exports.create = (req,res)=>{
     // validate request
@@ -45,7 +45,7 @@ exports.createF = (req,res)=>{
     req.body.email=req.body.email.trim();
 
     // new user
-    const freiman = new Freimandb({
+    const freiman = new Katzdb({
         name: req.body.name,
         email: req.body.email,
         numOfF: req.body.numOfF,
@@ -86,7 +86,7 @@ exports.find = (req, res)=>{
 exports.findF = (req, res)=>{
 
     {
-        Freimandb.find()
+        Katzdb.find()
             .then(freiman => {
                 res.send(freiman)
             })

@@ -22,8 +22,8 @@ exports.error_pageF=(req,res)=>{
 exports.add_rsvp=(req,res)=>{
     res.render('add_rsvp');
 }
-exports.zviki_tamar_freiman=(req,res)=>{
-    res.render('zviki_tamar_freiman');
+exports.bentzi_tovi=(req,res)=>{
+    res.render('bentzi_tovi');
 }
 exports.guest_list=(req,res)=>{
     axios.get('http://localhost:3000/api/participents')
@@ -35,10 +35,10 @@ exports.guest_list=(req,res)=>{
         })
 }
 
-exports.guest_list_freiman=(req,res)=>{
+exports.guest_list_katz=(req,res)=>{
     axios.get('http://localhost:3000/api/freiman')
         .then(function(response){
-            res.render('guest_list_freiman', {freiman:response.data});
+            res.render('guest_list_katz', {freiman:response.data});
         })
         .catch(err =>{
             res.send(err);
