@@ -9,7 +9,7 @@ route.get('/',services.homeRoutes);
 //route.get('/add-user',services.add_user);
 route.get('/guest-list',services.guest_list);
 route.get('/guest-list-katz',services.guest_list_katz);
-route.get('/avraham-efrat',services.add_rsvp);
+route.get('/bentzi-tovi-y',services.add_rsvp);
 route.get('/error-page',services.error_page);
 route.get('/error-page-freiman',services.error_pageF);
 route.get('/bentzi-tovi',services.bentzi_tovi);
