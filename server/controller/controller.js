@@ -1,5 +1,7 @@
 var Participentsdb= require('../model/model');
 var Katzdb= require('../model/modelF');
+var Cdb= require('../model/modelC');
+
 // create and save new user
 exports.create = (req,res)=>{
     // validate request
@@ -67,6 +69,40 @@ exports.createF = (req,res)=>{
 
 }
 
+// create and save new user for third user
+exports.createC = (req,res)=>{
+    // validate request
+    
+    if(!req.body){
+        res.status(400).send({ message : "אנא אשלם את הפרטים החסרים"});
+        return;
+    }
+   
+    req.body.email=req.body.email.trim();
+
+    // new user
+    const c = new Cdb({
+        name: req.body.name,
+        email: req.body.email,
+        numOfF: req.body.numOfF,
+        numOfM: req.body.numOfM,
+        status: req.body.status,
+        notes: req.body.notes
+    })
+
+    // save user in the database
+    c
+        .save(c)
+        .then(data => {
+            //res.send(data)
+            res.redirect('/c')
+        })
+        .catch(err =>{
+            res.redirect('/error-page-c');
+        });
+
+}
+
 // retrieve and return all users/ retrive and return a single user
 exports.find = (req, res)=>{
 
@@ -89,6 +125,21 @@ exports.findF = (req, res)=>{
         Katzdb.find()
             .then(freiman => {
                 res.send(freiman)
+            })
+            .catch(err => {
+                res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
+            })
+    }
+
+    
+}
+
+exports.findC = (req, res)=>{
+
+    {
+        Cdb.find()
+            .then(c => {
+                res.send(c)
             })
             .catch(err => {
                 res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
