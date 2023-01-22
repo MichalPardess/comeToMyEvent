@@ -130,11 +130,15 @@ table{
     display: block; 
     margin-right: auto; 
     margin-left: auto;
+    width: 20%;
 
 }
 @media only screen and (max-width: 1024px){
     table, thead, tbody, th, td, tr{
         display: block;
+    }
+    logo{
+        width: 100%;
     }
 
     thead tr{
