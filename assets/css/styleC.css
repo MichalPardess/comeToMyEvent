@@ -126,19 +126,18 @@ table{
     background-color: var(--dark) ;
     border-color: #32383e;
 }
+
+
 .logo{
     display: block; 
     margin-right: auto; 
     margin-left: auto;
-    width: 20%;
+    height: 50%;
 
 }
 @media only screen and (max-width: 1024px){
     table, thead, tbody, th, td, tr{
         display: block;
-    }
-    logo{
-        width: 100%;
     }
 
     thead tr{
