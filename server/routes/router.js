@@ -9,6 +9,7 @@ route.get('/c',services.homeRoutesC);
 //route.get('/add-user',services.add_user);
 route.get('/guest-list',services.guest_list);
 route.get('/guest-list-k',services.guest_list_C);
+route.get('/guest-list-katz',services.guest_list_katz);
 route.get('/bentzi-tovi-y',services.add_rsvp);
 route.get('/error-page',services.error_page);
 route.get('/error-page-freiman',services.error_pageF);
