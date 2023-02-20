@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
 
 :root{
-    --dark: #fceed7;
-    --light: #adb5bd;
+    --dark: #424242;
+    --light: #4e4e4e;
     --border: #dee2e6;
     --border-btn: #edf2f4;
-    --back-clr: #1f1f1f;
+    --back-clr: #ffffff;
 }
 
 * {
@@ -101,7 +101,7 @@ table{
     vertical-align: top;
     text-align: center;
     border-top: 1px solid var(--border);
-    color: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
     
 }
 
@@ -121,7 +121,7 @@ table{
 }
 
 .table .thead-dark th{
-    color: rgb(59, 59, 59);
+    color: rgb(255, 255, 255);
     background-color: var(--dark) ;
     border-color: #32383e;
 }
@@ -232,7 +232,7 @@ table{
 .radio input[type='radio']:disabled + .radio-label:before{
     box-shadow: inset 0 0 0 4px #e9ecef;
     border-color: #b4b4b4;
-    background: #715860;
+    background: #0000;
     color: #fff;
 }
 

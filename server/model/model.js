@@ -7,7 +7,6 @@ var schema = new mongoose.Schema({
     },
     email : {
         type: String,
-        unique: true
     },
     numOfF : String,
     numOfM : String,

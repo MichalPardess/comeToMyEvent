@@ -14,7 +14,7 @@ route.get('/bentzi-tovi-y',services.add_rsvp);
 route.get('/error-page',services.error_page);
 route.get('/error-page-freiman',services.error_pageF);
 route.get('/error-page-C',services.error_pageC);
-route.get('/bentzi-tovi',services.bentzi_tovi);
+route.get('/yossi-nehi',services.rsvp_A);
 route.get('/hilel-mali',services.rsvp_C);
 route.post('/api/freiman', controller.createF);
 route.post('/api/participents', controller.create);

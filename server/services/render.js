@@ -36,8 +36,8 @@ exports.error_pageC=(req,res)=>{
 exports.add_rsvp=(req,res)=>{
     res.render('add_rsvp');
 }
-exports.bentzi_tovi=(req,res)=>{
-    res.render('bentzi_tovi');
+exports.rsvp_A=(req,res)=>{
+    res.render('rsvp_A');
 }
 exports.rsvp_C=(req,res)=>{
     res.render('rsvp_C');
