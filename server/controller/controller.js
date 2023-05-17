@@ -25,7 +25,7 @@ exports.create = (req,res)=>{
         .save(participent)
         .then(data => {
             //res.send(data)
-            res.redirect('/')
+            res.redirect('/a')
         })
         .catch(err =>{
             //res.alert(err.message)

@@ -5,6 +5,7 @@ const services= require('../services/render');
 const controller=require('../controller/controller');
 
 route.get('/',services.homeRoutes);
+route.get('/a',services.homeRoutesA);
 route.get('/c',services.homeRoutesC);
 //route.get('/add-user',services.add_user);
 route.get('/guest-list',services.guest_list);
@@ -14,7 +15,7 @@ route.get('/bentzi-tovi-y',services.add_rsvp);
 route.get('/error-page',services.error_page);
 route.get('/error-page-freiman',services.error_pageF);
 route.get('/error-page-C',services.error_pageC);
-route.get('/yossi-nechy',services.rsvp_A);
+route.get('/ariel-avigail',services.rsvp_A);
 route.get('/hilel-mali',services.rsvp_C);
 route.post('/api/freiman', controller.createF);
 route.post('/api/participents', controller.create);

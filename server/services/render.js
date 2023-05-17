@@ -9,6 +9,15 @@ exports.homeRoutes=(req,res)=>{
             res.send(err);
         })
 }
+exports.homeRoutesA=(req,res)=>{
+    axios.get('http://localhost:3000/api/participents')
+        .then(function(response){
+            res.render('index A', {participents:response.data});
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+}
 
 exports.homeRoutesC=(req,res)=>{
     axios.get('http://localhost:3000/api/c')
