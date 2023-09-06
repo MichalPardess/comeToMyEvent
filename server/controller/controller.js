@@ -13,6 +13,7 @@ exports.create = (req,res)=>{
     // new user
     const participent = new Participentsdb({
         name: req.body.name,
+        PhoneNumber: req.body.PhoneNumber,
         email: req.body.email,
         numOfF: req.body.numOfF,
         numOfM: req.body.numOfM,

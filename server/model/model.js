@@ -8,6 +8,9 @@ var schema = new mongoose.Schema({
     email : {
         type: String,
     },
+    PhoneNumber : {
+        type: String,
+    }, 
     numOfF : String,
     numOfM : String,
     status : String,
