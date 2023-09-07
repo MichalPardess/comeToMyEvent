@@ -84,6 +84,7 @@ exports.createC = (req,res)=>{
     // new user
     const c = new Cdb({
         name: req.body.name,
+        PhoneNumber: req.body.PhoneNumber,
         email: req.body.email,
         numOfF: req.body.numOfF,
         numOfM: req.body.numOfM,

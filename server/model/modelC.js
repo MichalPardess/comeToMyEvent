@@ -9,6 +9,9 @@ var schema = new mongoose.Schema({
         type: String,
         //unique: true
     },
+    PhoneNumber : {
+        type: String,
+    }, 
     numOfF : String,
     numOfM : String,
     status : String,
