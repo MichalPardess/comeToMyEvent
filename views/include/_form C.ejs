@@ -3,27 +3,31 @@
 <form action="/api/c" method="POST" id="add_user">
     <div class="new_user">
         <div class="form-group"> 
-            <label for="name" class="text-light">שם פרטי ומשפחה</label>
+            <label for="name" class="text-light">Name:</label>
             <input type="hidden" name="id" value="">
-            <input type="text" name="name" value="" placeholder="שם מלא">
+            <input type="text" name="name" value="" placeholder="your full name">
 
         </div>
         <div class="form-group">
             <div style="width: 50%; float: left; padding-right: 10px;"> 
-                <label for="PhoneNumber" class="text-light">נייד</label>
+                <label for="PhoneNumber" class="text-light">Mobile:</label>
                 <input type="text" id="PhoneNumber" name="PhoneNumber" value="" placeholder="052-000-0000">
     
             </div>
             <div style="width: 50%;  float: left;  padding-left: 10px;"> 
-                <label for="Email" class="text-light">כתובת מייל</label>
+                <label for="Email" class="text-light">Email Address:</label>
                 <input type="text" id="mail" name="email" value="" placeholder="example@gmail.com">
     
             </div>
         </div>
         <div class="form-group"> 
-            <label class="text-light">משתתפים</label>
-            <br>
-            <div class="radio inline">
+            <label class="text-light">Guests:</label>
+            <select name="numOfM" style="color:  #494949;" id="radio-2">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
+            <!--<div class="radio inline">
                 <label for="radio-2" class="radio-label" style="color:  #494949;">נשים</label>
                 <select name="numOfF" style="color:  #494949;" id="radio-2">
                     <option value="0">0</option>
@@ -44,27 +48,28 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                   </select>
-            </div>
+            </div>-->
         </div>
+        <br>
         <div class="form-group"> 
-            <label for="Status" class="text-light">סטטוס</label>
+            <label for="Status" class="text-light">Status:</label>
             <br>
             <div class="radio inline">
-                <input type="radio" id="radio-4" name="status" value="משתתף" checked>
-                <label for="radio-4" class="radio-label" style="color: #494949;">אשתתף</label>
+                <input type="radio" id="radio-4" name="status" value="Attending" checked>
+                <label for="radio-4" class="radio-label" style="color: #494949;">Will Attend</label>
             </div>
             <div class="radio inline">
-                <input type="radio" id="radio-5" name="status" value="לא משתתף">
-                <label for="radio-5" class="radio-label" style="color: #494949;">לא אשתתף</label>
+                <input type="radio" id="radio-5" name="status" value="Not Attending">
+                <label for="radio-5" class="radio-label" style="color: #494949;">Will Not Attend</label>
             </div>
         </div>
         <div class="form-group"> 
-            <label for="notes" class="text-light">הערות נוספות</label>
-            <input type="text" name="notes" value="" placeholder="הערות">
+            <label for="notes" class="text-light">Notes:</label>
+            <input type="text" name="notes" value="" placeholder="something to say">
 
         </div>
         <div class="form-group"> 
-           <button type="submit" class="btn text-dark update">אישור</button>
+           <button type="submit" class="btn text-dark update">Submit</button>
         </div>
     </div>
 </form>

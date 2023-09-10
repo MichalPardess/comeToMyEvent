@@ -185,14 +185,14 @@ table{
 #update_user .form-group,
 #add_user .form-group{
     margin: .4em 0;
-    direction: rtl;
+    direction: ltr;
 }
 
 #update_user .form-group input[type="text"],
 #add_user .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
-    direction: rtl;
+    direction: ltr;
     margin: .5em 0;
     background-color: #ffffff;
     border: 1px solid var(--border);
