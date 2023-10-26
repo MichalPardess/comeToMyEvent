@@ -1,12 +1,12 @@
 <!--form handling-->
 <div style="width: 80%; margin: 0 auto">
-<form action="/api/participents" method="POST" id="add_user">
+<form name="add_user" action="/api/participents" method="POST" id="add_user">
     <div class="new_user">
         <div class="form-group"> 
             <label for="name" class="text-light">שם פרטי ומשפחה</label>
             <input type="hidden" name="id" value="">
             <input type="text" id="name" name="name" value="" placeholder="שם מלא">
-
+            <p class="error name-error"></p>
         </div>
         <div class="form-group">
             <label for="PhoneNumber" class="text-light">נייד</label>
@@ -31,7 +31,7 @@
             <label class="text-light">משתתפים</label>
             <br>
             <div class="radio inline">
-                <label for="radio-2" class="radio-label" style="color: rgb(133,90,34);">נשים</label>
+                <label for="radio-2" class="radio-label" style="color:#6b6b6b;">נשים</label>
                 <select name="numOfF" style="color: rgb(56, 56, 56);" id="radio-2">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -42,7 +42,7 @@
                   </select>
             </div>
             <div class="radio inline">
-                <label for="radio-2" class="radio-label" style="color: rgb(133,90,34);">גברים</label>
+                <label for="radio-2" class="radio-label" style="color: #6b6b6b">גברים</label>
                 <select name="numOfM" style="color: rgb(56, 56, 56);" id="radio-2">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -57,13 +57,14 @@
             <label for="Status" class="text-light">סטטוס</label>
             <br>
             <div class="radio inline">
-                <input type="radio" id="radio-4" name="status" value="משתתף   " checked>
-                <label for="radio-4" class="radio-label" style="color:rgb(133,90,34);"> אשתתף  </label>
+                <input type="radio" id="radio-4" name="status" value="משתתף   ">
+                <label for="radio-4" class="radio-label" style="color:#6b6b6b"> אשתתף  </label>
             </div>
             <div class="radio inline">
                 <input type="radio" id="radio-5" name="status" value=" לא משתתף ">
-                <label for="radio-5" class="radio-label" style="color:rgb(133,90,34);"> לא אשתתף </label>
+                <label for="radio-5" class="radio-label" style="color:#6b6b6b"> לא אשתתף </label>
             </div>
+            <p class="error status-error"></p>
         </div>
         <div class="form-group"> 
             <label for="notes" class="text-light">הערות נוספות</label>
@@ -76,3 +77,34 @@
     </div>
 </form>
 </div>
+<script>
+    function showError(errorElement, errorMessage){
+        document.querySelector("."+errorElement).classList.add("display-error");
+        document.querySelector("."+errorElement).innerHTML=errorMessage;
+
+    }
+    function clearError(){
+        let errors=document.querySelectorAll(".error");
+        for(let i of errors){
+            i.classList.remove("display-error");
+        }
+    }
+    let form=document.forms['add_user'];
+    form.onsubmit=function(event){
+
+        clearError();
+
+        if(form.name.value===""){
+            showError("name-error", "שדה זה הנו שדה חובה");
+            return false;
+            event.preventDefault();
+        }
+        if(form.status.value===""){
+            showError("status-error", "שדה זה הנו שדה חובה");
+            return false;
+            event.preventDefault();
+        }
+            
+        
+    }
+</script>
