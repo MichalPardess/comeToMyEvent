@@ -3,8 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
 
 :root{
-    --dark: #baa06a;
-    --light: #414141;
+    --dark: #414141;
+    --light: #baa06a;
     --border: #ffffff;
     --border-btn: rgb(12, 10, 6);
     --back-clr: #ffffff;
