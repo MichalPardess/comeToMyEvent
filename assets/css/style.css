@@ -143,14 +143,14 @@ table{
 
 }
 .logoImg{
-    width: 40%;
+    width: 20%;
 }
 @media only screen and (max-width: 1024px){
     table, thead, tbody, th, td, tr{
         display: block;
     }
     img.logoImg{
-        width: 80%;
+        width: 40%;
     }
     thead tr{
         position: absolute;
