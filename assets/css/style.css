@@ -24,8 +24,7 @@ body{
     background-color: #e8ddc7;
     /*background-image: url(/img/back.jpg)*/
 }
-header {
-background: none;}
+
 
 
 
@@ -84,7 +83,6 @@ a {
 }
 
 #header nav{
-    background-color: var(--back-clr);
     padding: 1em 0;
     width: 100%;
 }
@@ -138,9 +136,10 @@ table{
     border-color: #32383e;
 }
 .logo{
-    display: block; 
+    display: inline-flexbox; 
     margin-right: auto; 
     margin-left: auto;
+    align-self: center;
 
 }
 .logoImg{
