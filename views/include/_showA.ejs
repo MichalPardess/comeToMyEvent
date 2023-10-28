@@ -16,7 +16,7 @@
 <% for (var i=0; i<participents.length; i++) { %>
 
 <tr>
-    <th><%=participents[i].name%></th>
+    <th><%=participents[i].fName%> <%=participents[i].lName%></th>
     <th><%=participents[i].status%></th>
     <th>
         <a> <div id="<%=i%>" onclick="showMore(this.id)" class="fa-solid fa-user"></div></a>
