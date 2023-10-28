@@ -283,4 +283,6 @@ table{
 .error.display-error{
     display: block;
     margin-bottom: 20px;
+    width: 50%
 }
+
