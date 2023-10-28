@@ -16,7 +16,7 @@
             </div>
             <div style="width: 50%; float: left; padding-left: 10px;"> 
                 <label for="lName" class="text-light">שם משפחה</label>
-                <input type="hidden" name="lName" value="">
+                <input type="hidden" name="id" value="">
                 <input type="text" id="fName" name="fName" value="" placeholder="שם משפחה">
             </div>
             <p class="error name-error"></p>
@@ -112,16 +112,16 @@
 
         clearError();
 
-        if(form.fName.value===""){
+        if(form.fName.value==="" || form.lName.value===""){
             showError("name-error", "שדות חובה");
             return false;
             event.preventDefault();
         }
-        if(form.lName.value===""){
-            showError("name-error", "שדות חובה");
-            return false;
-            event.preventDefault();
-        }
+       // if(form.lName.value===""){
+        //    showError("name-error", "שדות חובה");
+        //    return false;
+        //    event.preventDefault();
+        //}
         if(form.status.value===""){
             showError("status-error", "שדה זה הנו שדה חובה");
             return false;
