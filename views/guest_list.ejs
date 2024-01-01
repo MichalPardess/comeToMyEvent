@@ -13,7 +13,7 @@
     function showNum() {
         var numOfP=0;
         for (var i=0; i<participents.length; i++) {
-            numOfP=numOfP+participents[i].numOfF+participents[i].numOfM;
+            numOfP=numOfP+participents[i].numOfM;
         }
         return numOfP;
             
@@ -27,7 +27,7 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/chaim-bar-mitzva" class="border-shaddow">
+                <a href="/idan-alisa" class="border-shaddow">
                     <span class="fa-solid fa-user" style="color:#baa06a;"></span>
                     <b>הוספת אורח</b></a>
                 <a href="/guest-list" onclick="ExportToExcel('xlsx')" style="color:#baa06a; text-align: center;">
@@ -37,7 +37,7 @@
             <!--form handling-->
             <% let numP=0 %>
             <% for (var i=0; i<participents.length; i++) { %>
-                <% numP=numP+parseInt(participents[i].numOfF)%>
+                <!--<% numP=numP+parseInt(participents[i].numOfF)%>-->
                 <% numP=numP+parseInt(participents[i].numOfM)%>
             <% } %>
              <div style="text-align: center; color:#baa06a;"> <span dir="rtl"><b>עד כה נרשמו: <%=numP %></b> </span></div>  
