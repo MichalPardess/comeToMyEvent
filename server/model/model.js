@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
-    fName : {
-        type : String,
-        required: true
-    },
-    lName : {
+    name : {
         type : String,
         required: true
     },
@@ -15,8 +11,10 @@ var schema = new mongoose.Schema({
     PhoneNumber : {
         type: String,
     }, 
-    numOfF : String,
     numOfM : String,
+
+   // numOfF : String,
+    //numOfM : String,
     status : String,
     notes : String
 })

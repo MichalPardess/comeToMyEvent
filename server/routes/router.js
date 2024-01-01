@@ -15,7 +15,7 @@ route.get('/guest-list-katz',services.guest_list_katz);
 route.get('/error-page',services.error_page);
 route.get('/error-page-freiman',services.error_pageF);
 route.get('/error-page-C',services.error_pageC);
-route.get('/avishay-tehila',services.rsvp_A);
+route.get('/idan-alisa',services.rsvp_A);
 route.get('/galit-yakir',services.rsvp_C);
 route.post('/api/freiman', controller.createF);
 route.post('/api/participents', controller.create);

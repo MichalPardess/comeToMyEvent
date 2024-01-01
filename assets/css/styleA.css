@@ -3,23 +3,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
 
 :root{
-    --dark: #424242;
-    --light: #525252;
-    --border: #4e4e4e;
-    --border-btn: #ffffff;
-    --back-clr: #f1b4ad;
+    --dark: #414141;
+    --light: #baa06a;
+    --border: #000000;
+    --border-btn: rgb(12, 10, 6);
+    --back-clr: #ffffff;
 }
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
+    
 }
 
+
 body{
-    background-color: #fffadb;
-    background-image: url(/img/bg.jpg)
+    background-image: url(/img/bgA.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #FFFCF9;
+    /*background-image: url(/img/back.jpg)*/
 }
+
+
+
 
 a {
     text-decoration: none;
@@ -51,7 +61,7 @@ a {
 
 .border-shadow{
     border: 1px solid var(--border-btn);
-    box-shadow: 1px 3px 10px #494949;
+    box-shadow: 1px 3px 10px #e9ecef;
 }
 
 .text-dark{
@@ -73,11 +83,9 @@ a {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #32383e;
 }
 
 #header nav{
-    /*background-color: var(--back-clr);*/
     padding: 1em 0;
     width: 100%;
 }
@@ -106,7 +114,7 @@ table{
     vertical-align: top;
     text-align: center;
     border-top: 1px solid var(--border);
-    color: rgb(80, 80, 80);
+    color: rgb(95, 95, 95);
     
 }
 
@@ -118,7 +126,7 @@ table{
 }
 
 .table tr:hover{
-    background-color: var(--back-clr) ;
+    background-color:#cacaca ;
 }
 
 .table tr:hover td > a{
@@ -126,32 +134,27 @@ table{
 }
 
 .table .thead-dark th{
-    color: var(--back-clr);
+    color: rgb(255, 255, 255);
     background-color: var(--dark) ;
     border-color: #32383e;
 }
-
-
 .logo{
     display: inline-flexbox; 
     margin-right: auto; 
     margin-left: auto;
     align-self: center;
-    
 
 }
 .logoImg{
-    width: 40%;
+    width: 50%;
 }
-
 @media only screen and (max-width: 1024px){
     table, thead, tbody, th, td, tr{
         display: block;
     }
     img.logoImg{
-        width: 80%;
+        width: 40%;
     }
-
     thead tr{
         position: absolute;
         top: -9999px;
@@ -192,8 +195,8 @@ table{
 #add_user .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
-    direction: ltr;
     margin: .5em 0;
+    direction: ltr;
     background-color: #ffffff;
     border: 1px solid var(--border);
     font-family: 'Rubik', sans-serif;
@@ -210,13 +213,13 @@ table{
 .radio input[type='radio']{
     position: absolute;
     opacity: 0;
-    color: var(--back-clr);
+    color: #fff;
     
 }
 
 .radio input[type='radio'] + .radio-label:before{
     content: "";
-    background: var(--border-btn);
+    background:rgb(255, 255, 255);
     border-radius: 100%;
     border: 1px solid var(--border);
     display: inline-block;
@@ -230,36 +233,35 @@ table{
     text-align: center;
     -webkit-transition: all 250ms ease;
     transition: all 250ms ease;
-    color: var(--back-clr)
+    color: #fff
 }
 
 .radio input[type='radio']:checked + .radio-label:before{
-    background-color:  var(--back-clr);
+    background-color:  rgb(59, 59, 59);
     box-shadow: inset 0 0 0 4px #e9ecef;
-    color: var(--back-clr)
+    color: #fff
 }
 
 .radio input[type='radio']:focus + .radio-label:before{
     outline: none;
     border-color:var(--back-clr);
-    color:  rgb(133,90,34);
+    color: rgb(133,90,34);
 }
 
 .radio input[type='radio']:disabled + .radio-label:before{
     box-shadow: inset 0 0 0 4px #e9ecef;
     border-color: #b4b4b4;
-    background: #715860;
-    color: rgb(133,90,34);
+    background: #3a3a3a00;
+    color: #fff;
 }
 
 #update_user .form-group .btn,
 #add_user .form-group .btn{
     width: 100%;
     padding: .9em 1em;
-    background: var(--back-clr);
-    /*background: linear-gradient(90deg, rgba(133,90,34,1) 0%, rgba(224,218,190,1) 43%, rgba(133,90,34,1) 65%, rgba(154,108,63,1) 100%);*/
+    background:#baa06a;
     border: none;
-    color: #32383e;
+    color: rgb(255, 255, 255);
     font-family: 'Rubik', sans-serif;
     font-size: 1em;
     font-weight: 600;
@@ -270,6 +272,20 @@ table{
 
 #update_user .form-group .btn:hover,
 #add_user .form-group .btn:hover{
-    background:  #ffffff;
-    color:var(--back-clr);
+    background:  rgb(133,90,34);;
+    color:#ffffff;
 }
+.logo{
+    width: 200%;
+}
+.error{
+    color: #AF4242;
+    padding: 10px;
+    display: none;
+}
+.error.display-error{
+    display: block;
+    margin-bottom: 20px;
+    width: 50%
+}
+
