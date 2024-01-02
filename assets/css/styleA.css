@@ -154,6 +154,7 @@ table{
     }
     img.logoImg{
         width: 80%;
+        margin-top: 20%;
     }
     thead tr{
         position: absolute;
