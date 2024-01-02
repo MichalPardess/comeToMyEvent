@@ -70,7 +70,7 @@ exports.guest_list=(req,res)=>{
         .toString()
         .split(":");
     
-      if (!(username === "shriki" && password === "moshe")) {
+      if (!(username === "idan" && password === "alisa")) {
         return reject();
       }
     
