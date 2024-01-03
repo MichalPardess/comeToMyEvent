@@ -3,12 +3,10 @@
     <% for (var i=0; i<participents.length; i++) { %>
 
         <tr>
-            <th><%=participents[i].lName%></th>
-            <th><%=participents[i].fName%></th>
+            <th><%=participents[i].name%></th>
             <th><%=participents[i].status%></th>
             <th><%=participents[i].email%></th>
             <th><%=participents[i].PhoneNumber%></th>
-            <th><%=parseInt(participents[i].numOfF)%></th>
             <th><%=parseInt(participents[i].numOfM)%></th>
             <th><%=participents[i].notes%></th>
         <% } %>
