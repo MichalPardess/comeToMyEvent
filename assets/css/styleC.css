@@ -9,7 +9,9 @@
     --border-btn: #ffffff;
     --back-clr: #000000;
 }
-
+html{
+    min-height: 100%;
+}
 * {
     padding: 0;
     margin: 0;
