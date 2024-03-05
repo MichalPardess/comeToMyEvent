@@ -1,0 +1,89 @@
+<!--form handling-->
+<div style="width: 80%; margin: 0 auto">
+<form action="/api/d" method="POST" id="add_user">
+    <div class="new_user">
+        <div class="form-group"> 
+            <label for="name" class="text-light">שם מלא:</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="your full name">
+
+        </div>
+        <div class="form-group">
+            <div> 
+                <label for="PhoneNumber" class="text-light">טלפון:</label>
+                <input type="text" id="PhoneNumber" name="PhoneNumber" value="" placeholder="052-000-0000">
+    
+            </div>
+        </div>
+        <!--<div class="form-group"> 
+            <label class="text-light">Guests:</label>
+            <select name="numOfM" style="color:  #494949;" id="radio-2">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+
+              </select>
+            </div>-->
+            <div class="form-group"> 
+                <label class="text-light">משתתפים:</label>
+                <br>
+                <div class="radio inline">
+                    <label for="radio-2" class="radio-label" style="color:  #494949;">נשים</label>
+                    <select name="numOfF" style="color:  #494949;" id="radio-2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="radio inline">
+                <label for="radio-2" class="radio-label" style="color: #494949;">גברים</label>
+                <select name="numOfM" style="color: #494949;" id="radio-2">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+            </div>
+            </div>
+        
+        <br>
+        <div class="form-group"> 
+            <label for="Status" class="text-light">סטטוס:</label>
+            <br>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Attending" checked>
+                <label for="radio-4" class="radio-label" style="color: #494949;">אגיע לחופה</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Not Attending">
+                <label for="radio-5" class="radio-label" style="color: #494949;">אגיע לשמחת חתן כלה</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Not Attending">
+                <label for="radio-6" class="radio-label" style="color: #494949;">לא אגיע</label>
+            </div>
+        </div>
+        <div class="form-group"> 
+            <label for="notes" class="text-light">הערות:</label>
+            <input type="text" name="notes" value="" placeholder="something to say">
+
+        </div>
+        <div class="form-group"> 
+           <button type="submit" class="btn text-dark update">אישור</button>
+        </div>
+    </div>
+</form>
+</div>

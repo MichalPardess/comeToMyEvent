@@ -1,6 +1,7 @@
 var Participentsdb= require('../model/model');
 var Katzdb= require('../model/modelF');
 var Cdb= require('../model/modelC');
+var Ddb= require('../model/modelD');
 
 // create and save new user
 exports.create = (req,res)=>{
@@ -105,6 +106,39 @@ exports.createC = (req,res)=>{
         });
 
 }
+exports.createD = (req,res)=>{
+    // validate request
+    
+    if(!req.body){
+        res.status(400).send({ message : "אנא אשלם את הפרטים החסרים"});
+        return;
+    }
+   
+    //req.body.email=req.body.email.trim();
+
+    // new user
+    const d = new Ddb({
+        name: req.body.name,
+        PhoneNumber: req.body.PhoneNumber,
+        //email: req.body.email,
+        numOfF: req.body.numOfF,
+        numOfM: req.body.numOfM,
+        status: req.body.status,
+        notes: req.body.notes
+    })
+
+    // save user in the database
+    d
+        .save(d)
+        .then(data => {
+            //res.send(data)
+            res.redirect('/d')
+        })
+        .catch(err =>{
+            res.redirect('/error-page-d');
+        });
+
+}
 
 // retrieve and return all users/ retrive and return a single user
 exports.find = (req, res)=>{
@@ -143,6 +177,20 @@ exports.findC = (req, res)=>{
         Cdb.find()
             .then(c => {
                 res.send(c)
+            })
+            .catch(err => {
+                res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
+            })
+    }
+
+    
+}
+exports.findD = (req, res)=>{
+
+    {
+        Ddb.find()
+            .then(d => {
+                res.send(d)
             })
             .catch(err => {
                 res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
