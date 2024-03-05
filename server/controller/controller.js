@@ -80,13 +80,13 @@ exports.createC = (req,res)=>{
         return;
     }
    
-    req.body.email=req.body.email.trim();
+    //req.body.email=req.body.email.trim();
 
     // new user
     const c = new Cdb({
         name: req.body.name,
         PhoneNumber: req.body.PhoneNumber,
-        email: req.body.email,
+        //email: req.body.email,
         numOfF: req.body.numOfF,
         numOfM: req.body.numOfM,
         status: req.body.status,
