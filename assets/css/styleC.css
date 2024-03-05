@@ -7,7 +7,7 @@
     --light: #525252;
     --border: #4e4e4e;
     --border-btn: #ffffff;
-    --back-clr: #f1b4ad;
+    --back-clr: #000000;
 }
 
 * {
@@ -17,8 +17,11 @@
 }
 
 body{
-    background-color: #fffadb;
-    background-image: url(/img/bg.jpg)
+    background-color: #ffffff;
+    background-image: url(/img/bg.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 a {
@@ -141,7 +144,7 @@ table{
 
 }
 .logoImg{
-    width: 40%;
+    width: 30%;
 }
 
 @media only screen and (max-width: 1024px){
@@ -149,7 +152,7 @@ table{
         display: block;
     }
     img.logoImg{
-        width: 80%;
+        width: 70%;
     }
 
     thead tr{
@@ -185,14 +188,14 @@ table{
 #update_user .form-group,
 #add_user .form-group{
     margin: .4em 0;
-    direction: ltr;
+    direction: rtl;
 }
 
 #update_user .form-group input[type="text"],
 #add_user .form-group input[type="text"]{
     width: 100%;
     padding: .6em 1em;
-    direction: ltr;
+    direction: rtl;
     margin: .5em 0;
     background-color: #ffffff;
     border: 1px solid var(--border);
@@ -210,6 +213,7 @@ table{
 .radio input[type='radio']{
     position: absolute;
     opacity: 0;
+    color: #ffffff;
     color: var(--back-clr);
     
 }
@@ -235,7 +239,7 @@ table{
 
 .radio input[type='radio']:checked + .radio-label:before{
     background-color:  var(--back-clr);
-    box-shadow: inset 0 0 0 4px #e9ecef;
+    box-shadow: inset 0 0 0 4px #ffffff;
     color: var(--back-clr)
 }
 
@@ -259,7 +263,7 @@ table{
     background: var(--back-clr);
     /*background: linear-gradient(90deg, rgba(133,90,34,1) 0%, rgba(224,218,190,1) 43%, rgba(133,90,34,1) 65%, rgba(154,108,63,1) 100%);*/
     border: none;
-    color: #32383e;
+    color: #ffffff;
     font-family: 'Rubik', sans-serif;
     font-size: 1em;
     font-weight: 600;
