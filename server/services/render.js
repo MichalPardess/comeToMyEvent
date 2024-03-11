@@ -37,6 +37,15 @@ exports.homeRoutesD=(req,res)=>{
             res.send(err);
         })
 }
+exports.homeRoutesE=(req,res)=>{
+    axios.get('http://localhost:3000/api/e')
+        .then(function(response){
+            res.render('index E', {e:response.data});
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+}
 
 
 exports.add_user=(req,res)=>{
@@ -54,6 +63,9 @@ exports.error_pageC=(req,res)=>{
 exports.error_pageD=(req,res)=>{
     res.render('error_pageD');
 }
+exports.error_pageE=(req,res)=>{
+    res.render('error_pageE');
+}
 exports.add_rsvp=(req,res)=>{
     res.render('add_rsvp');
 }
@@ -65,6 +77,9 @@ exports.rsvp_C=(req,res)=>{
 }
 exports.rsvp_D=(req,res)=>{
     res.render('rsvp_D');
+}
+exports.rsvp_E=(req,res)=>{
+    res.render('rsvp_E');
 }
 exports.guest_list=(req,res)=>{
     const reject = () => {
@@ -122,6 +137,15 @@ exports.guest_list_D=(req,res)=>{
     axios.get('http://localhost:3000/api/d')
         .then(function(response){
             res.render('guest_list_D', {d:response.data});
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+}
+exports.guest_list_E=(req,res)=>{
+    axios.get('http://localhost:3000/api/e')
+        .then(function(response){
+            res.render('guest_list_E', {e:response.data});
         })
         .catch(err =>{
             res.send(err);
