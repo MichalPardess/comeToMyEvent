@@ -24,7 +24,7 @@ route.get('/error-page-E',services.error_pageE);
 route.get('/idan-alisa',services.rsvp_A);
 route.get('/netanel-tamar',services.rsvp_C);
 route.get('/tamar-netanel',services.rsvp_D);
-route.get('/israel-ayala',services.rsvp_E);
+route.get('/chagai-ayala',services.rsvp_E);
 route.post('/api/freiman', controller.createF);
 route.post('/api/participents', controller.create);
 route.post('/api/c', controller.createC);
