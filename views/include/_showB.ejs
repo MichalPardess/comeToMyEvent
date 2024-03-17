@@ -1,0 +1,27 @@
+<script>
+    function showMore(j) {
+        if(document.getElementById("row+"+j).style.display=="contents")
+            document.getElementById("row+"+j).style.display="none";
+        else
+            document.getElementById("row+"+j).style.display="contents";
+    }
+    function theNote(note) {
+        if(!note=="")
+            window.alert(note);
+    }
+ </script>
+<% for (var i=0; i<b.length; i++) { %>
+
+<tr>
+    <th><%=b[i].name%></th>
+    <th><%=b[i].status%></th>
+    <th>
+        <a> <div id="<%=i%>" onclick="showMore(this.id)" class="fa-solid fa-user"></div></a>
+    </th>
+</tr>
+<tr style="display: none; color:#b38b29;" id="row+<%=i%>">
+    <th style="color:#b38b29;"><%=b[i].PhoneNumber%></th>
+    <th style="color:#b38b29;"><%=b[i].numOfF%> נשים <%=b[i].numOfM%> גברים <%=b[i].numOfC%> ילדים </th>
+    <th style="color:#b38b29;"><a id="notes+<%=i%>"> <div id="<%=b[i].notes%>" onclick="theNote(this.id)" class="fa-solid fa-envelope"></div></a></th>
+</tr>
+<% } %>

@@ -1,13 +1,21 @@
 <table id="hidden" style="display: none;" dir="rtl">
 
+    <tr>
+        <th><שם></th>
+        <th>סטטוס</th>
+        <th>טלפון</th>
+        <th>גברים</th>
+        <th>נשים</th>
+        <th>הערות</th>
+        
     <% for (var i=0; i<e.length; i++) { %>
 
         <tr>
             <th><%=e[i].name%></th>
             <th><%=e[i].status%></th>
             <th><%=e[i].PhoneNumber%></th>
-            <th><%=e[i].email%></th>
-            <!--<th><%=parseInt(e[i].numOfF)%></th>-->
+            <!--<th><%=e[i].email%></th>
+            <th><%=parseInt(e[i].numOfF)%></th>-->
             <th><%=parseInt(e[i].numOfM)%></th>
             <th><%=parseInt(e[i].numOfF)%></th>
             <th><%=e[i].nones%></th>

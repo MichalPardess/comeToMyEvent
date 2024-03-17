@@ -1,5 +1,6 @@
 var Participentsdb= require('../model/model');
 var Katzdb= require('../model/modelF');
+var Bdb= require('../model/modelB');
 var Cdb= require('../model/modelC');
 var Ddb= require('../model/modelD');
 var Edb= require('../model/modelE');
@@ -74,6 +75,40 @@ exports.createF = (req,res)=>{
 }
 
 // create and save new user for third user
+exports.createB = (req,res)=>{
+    // validate request
+    
+    if(!req.body){
+        res.status(400).send({ message : "אנא אשלם את הפרטים החסרים"});
+        return;
+    }
+   
+    //req.body.email=req.body.email.trim();
+
+    // new user
+    const b = new Bdb({
+        name: req.body.name,
+        PhoneNumber: req.body.PhoneNumber,
+        //email: req.body.email,
+        numOfF: req.body.numOfF,
+        numOfM: req.body.numOfM,
+        numOfC: req.body.numOfC,
+        status: req.body.status,
+        notes: req.body.notes
+    })
+
+    // save user in the database
+    b
+        .save(b)
+        .then(data => {
+            //res.send(data)
+            res.redirect('/b')
+        })
+        .catch(err =>{
+            res.redirect('/error-page-b');
+        });
+
+}
 exports.createC = (req,res)=>{
     // validate request
     
@@ -196,6 +231,21 @@ exports.findF = (req, res)=>{
         Katzdb.find()
             .then(freiman => {
                 res.send(freiman)
+            })
+            .catch(err => {
+                res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
+            })
+    }
+
+    
+}
+
+exports.findB = (req, res)=>{
+
+    {
+        Bdb.find()
+            .then(b => {
+                res.send(b)
             })
             .catch(err => {
                 res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })

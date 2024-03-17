@@ -1,0 +1,49 @@
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+   <script>
+    function ExportToExcel(type, fn, dl) {
+       var elt = document.getElementById('hidden');
+       var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1"});
+       return dl ?
+         XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
+         XLSX.writeFile(wb, fn || ('guestList.' + (type || 'xlsx')));
+    }
+   </script>
+<!--include header-->
+<%- include('include/_headerB') %>
+<!--include header-->
+    <!--main site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/elazar-hadas" class="border-shaddow">
+                    <span class="fa-solid fa-user" style="color:rgb(82, 82, 82);"></span>
+                    <b>הוספת אורח</b></a>
+                <a href="/guest-list-kerman" onclick="ExportToExcel('xlsx')" style="color:rgb(82, 82, 82); text-align: center;">
+                    <span class="fa-solid fa-download" style="color:rgb(82, 82, 82);"></span>
+                    <b>הורדת רשימה</b></a>
+            </div>
+            
+            <!--form handling-->
+            <form action="/" method="POST">
+                <table id="tableG" class="table" dir="rtl">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th width="33%">שם</th>
+                            <th width="33%">סטטוס</th>
+                            <th width="33%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_showB') %>
+                    </tbody>
+                </table>
+                <%- include('include/_hidden table B') %>
+
+            </form>
+        </div>
+    </main>
+    <!--main site-->
+
+<!--include footer-->
+<%- include('include/_footer') %>
+<!--include footer-->

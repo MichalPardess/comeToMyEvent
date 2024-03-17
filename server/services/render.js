@@ -18,7 +18,15 @@ exports.homeRoutesA=(req,res)=>{
             res.send(err);
         })
 }
-
+exports.homeRoutesB=(req,res)=>{
+    axios.get('http://localhost:3000/api/b')
+        .then(function(response){
+            res.render('index B', {b:response.data});
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+}
 exports.homeRoutesC=(req,res)=>{
     axios.get('http://localhost:3000/api/c')
         .then(function(response){
@@ -57,6 +65,9 @@ exports.error_page=(req,res)=>{
 exports.error_pageF=(req,res)=>{
     res.render('error_pageF');
 }
+exports.error_pageB=(req,res)=>{
+    res.render('error_pageB');
+}
 exports.error_pageC=(req,res)=>{
     res.render('error_pageC');
 }
@@ -71,6 +82,9 @@ exports.add_rsvp=(req,res)=>{
 }
 exports.rsvp_A=(req,res)=>{
     res.render('rsvp_A');
+}
+exports.rsvp_B=(req,res)=>{
+    res.render('rsvp_B');
 }
 exports.rsvp_C=(req,res)=>{
     res.render('rsvp_C');
@@ -109,6 +123,15 @@ exports.guest_list=(req,res)=>{
         .then(function(response){
             
             res.render('guest_list', {participents:response.data});
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+}
+exports.guest_list_B=(req,res)=>{
+    axios.get('http://localhost:3000/api/b')
+        .then(function(response){
+            res.render('guest_list_B', {b:response.data});
         })
         .catch(err =>{
             res.send(err);
