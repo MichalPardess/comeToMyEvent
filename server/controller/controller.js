@@ -19,7 +19,7 @@ exports.create = (req,res)=>{
         name: req.body.name,
         PhoneNumber: req.body.PhoneNumber,
         email: req.body.email,
-        //numOfF: req.body.numOfF,
+        numOfF: req.body.numOfF,
         numOfM: req.body.numOfM,
         status: req.body.status,
         notes: req.body.notes

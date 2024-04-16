@@ -5,15 +5,15 @@ var schema = new mongoose.Schema({
         type : String,
         required: true
     },
-    email : {
-        type: String,
-    },
+   // email : {
+   //     type: String,
+   // },
     PhoneNumber : {
         type: String,
     }, 
     numOfM : String,
 
-   // numOfF : String,
+    numOfF : String,
     //numOfM : String,
     status : String,
     notes : String

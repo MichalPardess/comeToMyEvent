@@ -96,29 +96,7 @@ exports.rsvp_E=(req,res)=>{
     res.render('rsvp_E');
 }
 exports.guest_list=(req,res)=>{
-    const reject = () => {
-        res.setHeader("www-authenticate", "Basic");
-        res.sendStatus(401);
-      };
-    
-      const authorization = req.headers.authorization;
-    
-      if (!authorization) {
-        return reject();
-      }
-    
-      const [username, password] = Buffer.from(
-        authorization.replace("Basic ", ""),
-        "base64"
-      )
-        .toString()
-        .split(":");
-    
-      if (!(username === "idan" && password === "alisa")) {
-        return reject();
-      }
-    
-    
+   
     axios.get('http://localhost:3000/api/participents')
         .then(function(response){
             
