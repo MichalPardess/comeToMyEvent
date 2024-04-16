@@ -146,14 +146,14 @@ table{
 
 }
 .logoImg{
-    width: 50%;
+    width: 40%;
 }
 @media only screen and (max-width: 1024px){
     table, thead, tbody, th, td, tr{
         display: block;
     }
     img.logoImg{
-        width: 80%;
+        width: 70%;
         margin-top: 20%;
     }
     thead tr{
@@ -189,7 +189,7 @@ table{
 #update_user .form-group,
 #add_user .form-group{
     margin: .4em 0;
-    direction: ltr;
+    direction: rtl;
 }
 
 #update_user .form-group input[type="text"],
@@ -197,7 +197,7 @@ table{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
-    direction: ltr;
+    direction: rtl;
     background-color: #ffffff;
     border: 1px solid var(--border);
     font-family: 'Rubik', sans-serif;
@@ -277,7 +277,7 @@ table{
     color:#ffffff;
 }
 .logo{
-    width: 200%;
+    width: 100%;
 }
 .error{
     color: #AF4242;

@@ -3,7 +3,7 @@
 <form name="add_user" action="/api/participents" method="POST" id="add_user">
     <div class="new_user">
         <div class="form-group"> 
-            <label for="name" class="text-light">Name:</label>
+            <label for="name" class="text-light">שם מלא:</label>
             <input type="hidden" name="id" value="">
             <input type="text" name="name" value="" placeholder="your full name">
 
@@ -21,12 +21,12 @@
             </div>
             <p class="error name-error"></p>
         </div>-->
-        <!--<div class="form-group">
+        <div class="form-group">
             <label for="PhoneNumber" class="text-light">נייד</label>
             <input type="text" id="PhoneNumber" name="PhoneNumber" value="" placeholder="052-000-0000">
-     </div>-->
+        </div>
      
-    <div class="form-group">
+    <!--<div class="form-group">
         <div style="width: 40%; float: left; padding-right: 10px;"> 
             <label for="PhoneNumber" class="text-light">Mobile:</label>
             <input type="text" id="PhoneNumber" name="PhoneNumber" value="" placeholder="052-000-0000">
@@ -37,11 +37,11 @@
             <input type="text" id="mail" name="email" value="" placeholder="example@gmail.com">
 
         </div>
-    </div>
+    </div>-->
        
   
         
-        <!--<div class="form-group"> 
+        <div class="form-group"> 
             <label class="text-light">משתתפים</label>
             <br>
             <div class="radio inline">
@@ -66,8 +66,8 @@
                     <option value="5">5</option>
                   </select>
             </div>
-        </div>-->
-        <div class="form-group"> 
+        </div>
+        <!--<div class="form-group"> 
             <label class="text-light">Guests:</label>
             <select name="numOfM" style="color:  #494949;" id="radio-2">
                 <option value="0">0</option>
@@ -83,26 +83,27 @@
                 <option value="10">10</option>
 
               </select>
+              </div>-->
         <div class="form-group"> 
-            <label for="Status" class="text-light">Status:</label>
+            <label for="Status" class="text-light">סטטוס:</label>
             <br>
             <div class="radio inline">
                 <input type="radio" id="radio-4" name="status" value="Attending   ">
-                <label for="radio-4" class="radio-label" style="color:#6b6b6b">  Will Attend </label>
+                <label for="radio-4" class="radio-label" style="color:#6b6b6b">  אגיע </label>
             </div>
             <div class="radio inline">
                 <input type="radio" id="radio-6" name="status" value=" Not Attending  ">
-                <label for="radio-6" class="radio-label" style="color:#6b6b6b">Will Not Attend</label>
+                <label for="radio-6" class="radio-label" style="color:#6b6b6b">לא אגיע</label>
             </div>
             <p class="error status-error"></p>
         </div>
         <div class="form-group"> 
-            <label for="notes" class="text-light">Notes (Allergies):</label>
+            <label for="notes" class="text-light">הערות:</label>
             <input type="text" name="notes" value="" placeholder="something to say">
 
         </div>
         <div class="form-group"> 
-           <button type="submit" class="btn text-dark update">Submit</button>
+           <button type="submit" class="btn text-dark update">אישור</button>
         </div>
     </div>
 </form>
