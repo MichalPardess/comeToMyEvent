@@ -131,7 +131,8 @@ table{
 }
 
 .table .thead-dark th{
-    color: var(--back-clr);
+
+    color: #ffffff;
     background-color: var(--dark) ;
     border-color: #32383e;
 }
@@ -276,6 +277,6 @@ table{
 
 #update_user .form-group .btn:hover,
 #add_user .form-group .btn:hover{
-    background:  #ffffff;
+    background:  #b49e9ed5;
     color:var(--back-clr);
 }
