@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
 
 :root{
-    --dark: #424242;
-    --light: #525252;
+    --dark: #4c3010;
+    --light: #4c3010;
     --border: #4e4e4e;
     --border-btn: #ffffff;
-    --back-clr: #000000;
+    --back-clr: #4c3010;
 }
 html{
     min-height: 100%;
@@ -20,8 +20,8 @@ html{
 
 body{
     background-color: #ffffff;
-    background-image: url(/img/bg.jpg);
-    background-size:cover;
+    background-image: url(/img/bgC.jpg);
+    background-size:contain;
     background-repeat: no-repeat;
     background-position: top;
 }
@@ -146,7 +146,7 @@ table{
 
 }
 .logoImg{
-    width: 30%;
+    width: 10%;
 }
 
 @media only screen and (max-width: 1024px){
@@ -154,7 +154,7 @@ table{
         display: block;
     }
     img.logoImg{
-        width: 70%;
+        width: 40%;
     }
 
     thead tr{
