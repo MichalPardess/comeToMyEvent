@@ -111,7 +111,6 @@ table{
     vertical-align: top;
     text-align: center;
     border-top: 1px solid var(--border);
-    color: rgb(66, 66, 66);
     
 }
 
@@ -127,11 +126,16 @@ table{
     background-color: var(--back-clr);
     
 }
+.table tr{
+    color: #464646;    
+}
 .table th:hover{
     color: #ffffff;
 }
+
 .table tr:hover td > a{
     box-shadow: none;
+    color: #ffffff;
 }
 
 .table .thead-dark th{
