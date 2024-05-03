@@ -13,11 +13,11 @@
 <% for (var i=0; i<d.length; i++) { %>
 
 <tr>
-    <th><%=d[i].name%></th>
-    <th><%=d[i].status%></th>
-    <th>
-        <a> <div id="<%=i%>" onclick="showMore(this.id)" class="fa-solid fa-user"></div></a>
-    </th>
+    <th><b><%=d[i].name%></b></th>
+    <th><%=d[i].status%> <a id="notes+<%=i%>"> <div id="<%=d[i].notes%>" onclick="theNote(this.id)" class="fa-solid fa-envelope"></div></a></th>
+    <th><%=d[i].numOfF%> נשים <%=d[i].numOfM%> גברים</th>
+    <th><%=d[i].PhoneNumber%></th>
+
 </tr>
 <tr style="display: none; color:rgb(255, 96, 117);" id="row+<%=i%>">
     <!--<th style="color:rgb(255, 96, 117);"><%=d[i].email%> <br><%=d[i].PhoneNumber%></th>-->
