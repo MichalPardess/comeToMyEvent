@@ -89,6 +89,9 @@ exports.rsvp_B=(req,res)=>{
 exports.rsvp_C=(req,res)=>{
     res.render('rsvp_C');
 }
+exports.rsvp_C2=(req,res)=>{
+    res.render('rsvp_C2');
+}
 exports.rsvp_D=(req,res)=>{
     res.render('rsvp_D');
 }

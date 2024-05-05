@@ -27,6 +27,7 @@ route.get('/error-page-E',services.error_pageE);
 route.get('/rony-libi',services.rsvp_A);
 route.get('/elazar-hadas',services.rsvp_B);
 route.get('/shuki-shira',services.rsvp_C);
+route.get('/shuki-shira-wedding',services.rsvp_C2);
 route.get('/shira-shuki',services.rsvp_D);
 route.get('/chagai-ayala',services.rsvp_E);
 route.post('/api/freiman', controller.createF);
