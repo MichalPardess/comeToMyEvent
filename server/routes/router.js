@@ -24,7 +24,7 @@ route.get('/error-page-B',services.error_pageB);
 route.get('/error-page-C',services.error_pageC);
 route.get('/error-page-D',services.error_pageD);
 route.get('/error-page-E',services.error_pageE);
-route.get('/rony-libi',services.rsvp_A);
+route.get('/yair-yehudit',services.rsvp_A);
 route.get('/elazar-hadas',services.rsvp_B);
 route.get('/shuki-shira',services.rsvp_C);
 route.get('/shuki-shira-wedding',services.rsvp_C2);
