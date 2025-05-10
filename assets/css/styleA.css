@@ -4,7 +4,7 @@
 
 :root{
     --dark: #414141;
-    --light: #baa06a;
+    --light: #6f583b;
     --border: #000000;
     --border-btn: rgb(12, 10, 6);
     --back-clr: #ffffff;
@@ -22,7 +22,7 @@
 body{
     background-image: url(/img/bgA.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     background-color: #FFFCF9;
     /*background-image: url(/img/back.jpg)*/
@@ -146,7 +146,7 @@ table{
 
 }
 .logoImg{
-    width: 40%;
+    width: 30%;
 }
 @media only screen and (max-width: 1024px){
     table, thead, tbody, th, td, tr{
