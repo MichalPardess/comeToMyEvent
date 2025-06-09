@@ -3,11 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&display=swap');
 
 :root{
-    --dark: #4c3010;
-    --light: #4c3010;
-    --border: #4e4e4e;
+    --dark: #dfdad7;
+    --light: #dfdad7;
+    --border: #dfdad7;
     --border-btn: #ffffff;
-    --back-clr: #4c3010;
+    --back-clr: #dfdad7;
 }
 html{
     min-height: 100%;
@@ -19,11 +19,11 @@ html{
 }
 
 body{
-    background-color: #ffffff;
-    background-image: url(/img/bgC.jpg);
+    background-color: #5b5249;
+    /**background-image: url(/img/bgC.jpg);
     background-size:contain;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: top;**/
 }
 
 a {
@@ -122,25 +122,27 @@ table{
 }
 
 .table tr:hover{
-    color: #ffffff;
+    color: #5b5249;
+
     background-color: var(--back-clr);
     
 }
 .table tr{
-    color: #333333;    
+    color: #dfdad7;    
 }
 .table th:hover{
-    color: #ffffff;
+    color: #000000;
 }
 
 .table tr:hover td > a{
     box-shadow: none;
-    color: #ffffff;
+    color: #9c9c9c;
 }
 
 .table .thead-dark th{
 
-    color: #ffffff;
+    color: #5b5249;
+
     background-color: var(--dark) ;
     border-color: #32383e;
 }
@@ -155,7 +157,7 @@ table{
 
 }
 .logoImg{
-    width: 10%;
+    width: 30%;
 }
 
 @media only screen and (max-width: 1024px){
@@ -224,8 +226,8 @@ table{
 .radio input[type='radio']{
     position: absolute;
     opacity: 0;
-    color: #ffffff;
-    color: var(--back-clr);
+    color: #5b5249;
+   /** color: var(--back-clr);**/
     
 }
 
@@ -245,13 +247,15 @@ table{
     text-align: center;
     -webkit-transition: all 250ms ease;
     transition: all 250ms ease;
-    color: var(--back-clr)
+    color: #5b5249;
+    /**color: var(--back-clr)**/
 }
 
 .radio input[type='radio']:checked + .radio-label:before{
     background-color:  var(--back-clr);
     box-shadow: inset 0 0 0 4px #ffffff;
-    color: var(--back-clr)
+    color: #5b5249;
+    /**color: var(--back-clr)**/
 }
 
 .radio input[type='radio']:focus + .radio-label:before{
@@ -275,6 +279,7 @@ table{
     /*background: linear-gradient(90deg, rgba(133,90,34,1) 0%, rgba(224,218,190,1) 43%, rgba(133,90,34,1) 65%, rgba(154,108,63,1) 100%);*/
     border: none;
     color: #ffffff;
+    color: #5b5249;
     font-family: 'Rubik', sans-serif;
     font-size: 1em;
     font-weight: 600;
