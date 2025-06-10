@@ -13,7 +13,8 @@
 <% for (var i=0; i<d.length; i++) { %>
 
 <tr>
-    <th><b><%=d[i].name%></b></th>
+    <th><b><%=d[i].fName%></b></th>
+    <th><b><%=d[i].lName%></b></th>
     <th><%=d[i].status%> <a id="notes+<%=i%>"> <div id="<%=d[i].notes%>" onclick="theNote(this.id)" class="fa-solid fa-envelope"></div></a></th>
     <th><%=d[i].numOfF%> נשים <%=d[i].numOfM%> גברים</th>
     <th><%=d[i].PhoneNumber%></th>

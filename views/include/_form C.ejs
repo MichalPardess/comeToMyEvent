@@ -2,11 +2,17 @@
 <div style="width: 80%; margin: 0 auto">
 <form action="/api/c" method="POST" id="add_user">
     <div class="new_user">
-        <div class="form-group"> 
-            <label for="name" class="text-light">שם מלא:</label>
+        <div class="form-group">          
+       <div style="width: 50%; float: left;   padding-right: 10px;">
+            <label for="lName" class="text-light">שם משפחה:</label>
             <input type="hidden" name="id" value="">
-            <input type="text" name="name" value="" placeholder="your full name">
-
+            <input type="text" name="lName" value="" placeholder="your last name">
+        </div>
+        <div style="width: 50%; float: left;">
+            <label for="fName" class="text-light">שם פרטי:</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="fName" value="" placeholder="your first name">
+        </div>
         </div>
         <div class="form-group">
             <div> 

@@ -121,7 +121,8 @@ exports.createC = (req,res)=>{
 
     // new user
     const c = new Cdb({
-        name: req.body.name,
+        fName: req.body.fName,
+        lName: req.body.lName,
         PhoneNumber: req.body.PhoneNumber,
         //email: req.body.email,
         numOfF: req.body.numOfF,
@@ -154,7 +155,8 @@ exports.createD = (req,res)=>{
 
     // new user
     const d = new Ddb({
-        name: req.body.name,
+        fName: req.body.fName,
+        lName: req.body.lName,
         PhoneNumber: req.body.PhoneNumber,
         //email: req.body.email,
         numOfF: req.body.numOfF,
