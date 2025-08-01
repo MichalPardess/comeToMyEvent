@@ -14,7 +14,7 @@ var schema = new mongoose.Schema({
     numOfM : String,
 
     numOfF : String,
-    //numOfM : String,
+    numOfC : String,
     status : String,
     notes : String
 })

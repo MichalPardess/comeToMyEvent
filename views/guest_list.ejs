@@ -25,7 +25,6 @@
 <!--include header-->
 <style>
     body{
-     background-image: url(/img/bgA.jpg);
     background-size:auto;
     background-repeat: repeat;
     background-position: left;
@@ -37,12 +36,12 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
-                <a href="/yair-yehudit" class="border-shaddow">
-                    <span class="fa-solid fa-user" style="color:#baa06a;"></span>
+                <a href="/michael-tamar" class="border-shaddow">
+                    <span class="fa-solid fa-user" style="color:#fffcf5;"></span>
                     <b>הוספת אורח</b></a>
-                <a href="/guest-list" onclick="ExportToExcel('xlsx')" style="color:#baa06a; text-align: center;">
-                    <span class="fa-solid fa-download" style="color: #baa06a;"></span>
-                    <b style="color:#baa06a">הורדת רשימה</b></a>
+                <a href="/guest-list" onclick="ExportToExcel('xlsx')" style="color:#fffcf5; text-align: center;">
+                    <span class="fa-solid fa-download" style="color: #fffcf5;"></span>
+                    <b style="color:#fffcf5">הורדת רשימה</b></a>
             </div>
             <!--form handling-->
             <% let numP=0 %>
@@ -50,7 +49,7 @@
                 <% numP=numP+parseInt(participents[i].numOfM);%>
                 <% numP=numP+parseInt(participents[i].numOfF)%>
             <% } %>
-             <div style="text-align: center; color:#baa06a;"> <span dir="rtl"><b>עד כה נרשמו: <%=numP %></b> </span></div>  
+             <div style="text-align: center; color:#fffcf5;"> <span dir="rtl"><b>עד כה נרשמו: <%=numP %></b> </span></div>  
             <form action="/" method="POST">
                 <table id="tableG" class="table" dir="rtl">
                     <thead class="thead-dark">

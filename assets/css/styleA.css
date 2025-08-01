@@ -4,10 +4,10 @@
 
 :root{
     --dark: #414141;
-    --light: #6f583b;
+    --light: #dfdad7;
     --border: #000000;
     --border-btn: rgb(12, 10, 6);
-    --back-clr: #ffffff;
+    --back-clr: #000000;
 }
 
 * {
@@ -20,11 +20,11 @@
 
 
 body{
-    background-image: url(/img/bgA.jpg);
+    /*background-image: url(/img/bgA.jpg);*/
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
-    background-color: #FFFCF9;
+    background-color: #a58b79;
     /*background-image: url(/img/back.jpg)*/
 }
 
@@ -114,7 +114,7 @@ table{
     vertical-align: top;
     text-align: center;
     border-top: 1px solid var(--border);
-    color: rgb(95, 95, 95);
+    color: #dfdad7
     
 }
 
@@ -126,7 +126,7 @@ table{
 }
 
 .table tr:hover{
-    background-color:#cacaca ;
+    background-color:#000000 ;
 }
 
 .table tr:hover td > a{
@@ -136,7 +136,7 @@ table{
 .table .thead-dark th{
     color: rgb(255, 255, 255);
     background-color: var(--dark) ;
-    border-color: #32383e;
+    border-color: #dfdad7;
 }
 .logo{
     display: inline-flexbox; 
@@ -153,8 +153,8 @@ table{
         display: block;
     }
     img.logoImg{
-        width: 70%;
-        margin-top: 20%;
+        width: 60%;
+        margin-top: 10%;
     }
     thead tr{
         position: absolute;
@@ -214,7 +214,7 @@ table{
 .radio input[type='radio']{
     position: absolute;
     opacity: 0;
-    color: #fff;
+    color: #000000;
     
 }
 
@@ -234,33 +234,33 @@ table{
     text-align: center;
     -webkit-transition: all 250ms ease;
     transition: all 250ms ease;
-    color: #fff
+    color: #000000
 }
 
 .radio input[type='radio']:checked + .radio-label:before{
-    background-color:  rgb(59, 59, 59);
+    background-color: #333333;
     box-shadow: inset 0 0 0 4px #e9ecef;
-    color: #fff
+    color: #000000;
 }
 
 .radio input[type='radio']:focus + .radio-label:before{
     outline: none;
     border-color:var(--back-clr);
-    color: rgb(133,90,34);
+    color: #6d4d3b;
 }
 
 .radio input[type='radio']:disabled + .radio-label:before{
     box-shadow: inset 0 0 0 4px #e9ecef;
     border-color: #000000;
     background: #3a3a3a00;
-    color: #fff;
+    color: #080808;
 }
 
 #update_user .form-group .btn,
 #add_user .form-group .btn{
     width: 100%;
     padding: .9em 1em;
-    background:#baa06a;
+    background: #353535;
     border: none;
     color: rgb(255, 255, 255);
     font-family: 'Rubik', sans-serif;
@@ -273,8 +273,8 @@ table{
 
 #update_user .form-group .btn:hover,
 #add_user .form-group .btn:hover{
-    background:  rgb(133,90,34);;
-    color:#ffffff;
+    background:  #dfdad7;
+    color:#000000;
 }
 .logo{
     width: 100%;

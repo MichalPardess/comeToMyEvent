@@ -5,6 +5,7 @@
         <th>טלפון</th>
         <th>גברים</th>
         <th>נשים</th>
+        <th>ילדים</th>
         <th>הערות</th>
     <% for (var i=0; i<participents.length; i++) { %>
 
@@ -15,6 +16,7 @@
             <th><%=participents[i].PhoneNumber%></th>
             <th><%=parseInt(participents[i].numOfM)%></th>
             <th><%=parseInt(participents[i].numOfF)%></th>
+            <th><%=parseInt(participents[i].numOfC)%></th>
             <th><%=participents[i].notes%></th>
         <% } %>
 </table>

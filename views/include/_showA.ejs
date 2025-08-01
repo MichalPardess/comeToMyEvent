@@ -22,9 +22,9 @@
         <a> <div id="<%=i%>" onclick="showMore(this.id)" class="fa-solid fa-user"></div></a>
     </th>
 </tr>
-<tr style="display: none; color: rgb(133,90,34);" id="row+<%=i%>">
-    <th  style="color: rgb(133,90,34);"><%=participents[i].PhoneNumber%></th>
-    <th style="color: rgb(133,90,34);"><%=participents[i].numOfM%> גברים <%=participents[i].numOfF%> נשים</th>
-    <th style="color: rgb(133,90,34);"><a id="notes+<%=i%>"> <div id="<%=participents[i].notes%>" onclick="theNote(this.id)" class="fa-solid fa-envelope"></div></a></th>
+<tr style="display: none; color: rgb(0, 0, 0);" id="row+<%=i%>">
+    <th  style="color: rgb(0, 0, 0);"><%=participents[i].PhoneNumber%></th>
+    <th style="color: rgb(0, 0, 0);"><%=participents[i].numOfM%> גברים <%=participents[i].numOfF%> נשים <%=participents[i].numOfC%> ילדים</th>
+    <th style="color: rgb(0, 0, 0);"><a id="notes+<%=i%>"> <div id="<%=participents[i].notes%>" onclick="theNote(this.id)" class="fa-solid fa-envelope"></div></a></th>
 </tr>
 <% } %>

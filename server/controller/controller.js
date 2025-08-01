@@ -21,6 +21,7 @@ exports.create = (req,res)=>{
         email: req.body.email,
         numOfF: req.body.numOfF,
         numOfM: req.body.numOfM,
+        numOfC: req.body.numOfC,
         status: req.body.status,
         notes: req.body.notes
     })
