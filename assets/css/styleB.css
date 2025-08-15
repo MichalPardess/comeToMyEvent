@@ -262,7 +262,8 @@ table{
     width: 100%;
     padding: .9em 1em;
     /*background: var(--back-clr);*/
-    background: linear-gradient(90deg, #e5a151 30%, #ae652b 100%);
+    /*background: linear-gradient(90deg, #e5a151 30%, #ae652b 100%);*/
+    background: #625033;
     border: none;
     color: #ffffff;
     font-family: 'Rubik', sans-serif;
@@ -275,6 +276,6 @@ table{
 
 #update_user .form-group .btn:hover,
 #add_user .form-group .btn:hover{
-    background:  #ae652b;
-    color:var(--back-clr);
+    background:  #fff9f4;
+    color: #625033;
 }

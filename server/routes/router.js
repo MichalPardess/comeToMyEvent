@@ -25,7 +25,7 @@ route.get('/error-page-C',services.error_pageC);
 route.get('/error-page-D',services.error_pageD);
 route.get('/error-page-E',services.error_pageE);
 route.get('/michael-tamar',services.rsvp_A);
-route.get('/shimon-noah',services.rsvp_B);
+route.get('/shimon-noa',services.rsvp_B);
 route.get('/shira-uriel',services.rsvp_C);
 route.get('/shira-uriel-wedding',services.rsvp_C2);
 route.get('/uriel-shira',services.rsvp_D);
