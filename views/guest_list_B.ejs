@@ -22,7 +22,15 @@
                     <span class="fa-solid fa-download" style="color:rgb(82, 82, 82);"></span>
                     <b>הורדת רשימה</b></a>
             </div>
-            
+            <% let numM=0, numW=0, numP=0%>
+            <% for (var i=0; i<b.length; i++) { %>
+                <% if(b[i].status=="מגיע") { %>
+                <% numM=numM+parseInt(b[i].numOfM);%>
+                <% numW=numW+parseInt(b[i].numOfF) }%>
+
+            <% } %>
+                         <div style="text-align: center; color:#625033;"> <span dir="rtl"><b>עד כה נרשמו: <%=numM %> גברים <%=numW %> נשים לסעודה</b> </span></div>  
+
             <!--form handling-->
             <form action="/" method="POST">
                 <table id="tableG" class="table" dir="rtl">
