@@ -64,7 +64,7 @@ a {
     border: 1px solid var(--border-btn);
     box-shadow: 1px 3px 10px #e9ecef;
 }
-
+y
 .text-dark{
     color: var(--dark);
     font-family: 'Rubik', sans-serif;
@@ -155,7 +155,8 @@ table{
     }
     img.logoImg{
         width: 80%;
-        margin-top: 10%;
+        margin-top: 0%;
+        margin-bottom: 0%;
     }
     thead tr{
         position: absolute;
@@ -180,6 +181,7 @@ table{
 
 .form-title > h2{
     padding: .5em 0;
+    padding: 0;
 }
 
 .new_user{
@@ -189,8 +191,8 @@ table{
 
 #update_user .form-group,
 #add_user .form-group{
-    margin: .4em 0;
     direction: rtl;
+    margin-top: 0%;
 }
 
 #update_user .form-group input[type="text"],
@@ -198,6 +200,7 @@ table{
     width: 100%;
     padding: .6em 1em;
     margin: .5em 0;
+    margin: .1em 0;
     direction: rtl;
     background-color: #ffffff;
     border: 1px solid var(--border);
@@ -209,6 +212,7 @@ table{
 #update_user .form-group .radio,
 #add_user .form-group .radio{
     margin: 1em 2em;
+    margin: 0em 1em;
 }
 
 /* adding style to radio buttons */
