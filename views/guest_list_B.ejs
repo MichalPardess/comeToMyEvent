@@ -1,5 +1,18 @@
 <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
-   <script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+<script>
+function ExportToExcel() {
+  var elt = document.getElementById('hidden');
+  var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+  var wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
+  saveAs(new Blob([wbout], { type: "application/octet-stream" }), "guestList.xlsx");
+}
+</script>
+
+   <!--<script>
     function ExportToExcel(type, fn, dl) {
        var elt = document.getElementById('hidden');
        var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1"});
@@ -7,7 +20,7 @@
          XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }):
          XLSX.writeFile(wb, fn || ('guestList.' + (type || 'xlsx')));
     }
-   </script>
+   </script>-->
 <!--include header-->
 <%- include('include/_headerB') %>
 <!--include header-->
